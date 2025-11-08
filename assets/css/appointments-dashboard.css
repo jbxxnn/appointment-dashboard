@@ -1,0 +1,154 @@
+/* Table Styles */
+.shop_table {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+}
+
+.appt-table-head {
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.appt-table-body {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Search and Filter Styles */
+.appointment-search,
+.appointment-search-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+    .appointment-search {
+        width: 60%;
+        margin-right: 1%;
+    }
+    
+    .appointment-search-select {
+        width: 38%;
+    }
+}
+
+/* Button Styles */
+.woocommerce-button {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.appt-cancel {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.appt-reschedule {
+    background-color: #4ecdc4;
+    color: white;
+}
+
+.new-appt-button {
+    background-color: #45b7af;
+    color: white;
+}
+
+/* Loading State */
+.woocommerce-button.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.woocommerce-button.loading::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+/* Additional Info Styles */
+.adesc {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 4px;
+}
+
+.my-appt {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-left: 8px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .shop_table {
+        display: block;
+    }
+
+    .shop_table thead {
+        display: none;
+    }
+
+    .shop_table tbody,
+    .shop_table tr,
+    .shop_table td {
+        display: block;
+    }
+
+    .shop_table tr {
+        margin-bottom: 1.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 12px;
+    }
+
+    .mobile-label {
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 8px;
+    }
+
+    .appt-table-body {
+        border: none;
+        padding: 8px 0;
+    }
+}
+
+/* Animations */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Messages */
+.woocommerce-Message {
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: #f8f8f8;
+    border-left: 4px solid #45b7af;
+}
+
+.no-appointment-notice {
+    margin: 1em 0 0;
+} 
