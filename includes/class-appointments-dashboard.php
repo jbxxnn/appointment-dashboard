@@ -57,6 +57,10 @@ class Appointments_Dashboard {
     }
 
     public function enqueue_scripts() {
+        if (!$this->should_enqueue_assets()) {
+            return;
+        }
+
         wp_enqueue_style(
             'appointments-dashboard', 
             APPT_DASHBOARD_PLUGIN_URL . 'assets/css/appointments-dashboard.css',
@@ -71,5 +75,25 @@ class Appointments_Dashboard {
             APPT_DASHBOARD_VERSION,
             true
         );
+    }
+
+    private function should_enqueue_assets() {
+        if (is_admin()) {
+            return false;
+        }
+
+        global $post;
+
+        if ($post instanceof \WP_Post) {
+            if (has_shortcode($post->post_content, 'appointment_dashboard') ||
+                has_shortcode($post->post_content, 'past_appointment_dashboard')) {
+                return true;
+            }
+        }
+
+        /**
+         * Allow third-parties to opt-in to enqueueing the dashboard assets manually.
+         */
+        return apply_filters('appointments_dashboard_enqueue_assets', false);
     }
 } 
