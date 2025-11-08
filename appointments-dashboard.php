@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Appointments Dashboard
  * Description: Custom appointments dashboard for midwives and clients
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Jbxxnn
  * Text Domain: woocommerce-appointments
  */

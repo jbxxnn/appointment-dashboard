@@ -28,7 +28,7 @@ class Appointment_Helper {
         if ($role === 'vkpraktijk') {
             // For midwives, get their practice ID
             $user = get_user_by('id', $user_id);
-            $current_user_midwife = get_user_meta($user_id, 'user_registration_select_1739197158', true);
+            $current_user_midwife = get_user_meta($user_id, 'user_registration_select_1644061762', true);
             
             // Get all orders assigned to this practice
             $args = array(

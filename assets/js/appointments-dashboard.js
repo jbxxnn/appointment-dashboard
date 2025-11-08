@@ -61,7 +61,7 @@
     // Initialize tooltips and other UI elements
     $(document).ready(function() {
         // Add loading state to buttons
-        $('.woocommerce-button').on('click', function() {
+        $('.my_account_appointments').on('click', '.woocommerce-button', function() {
             $(this).addClass('loading').prop('disabled', true);
         });
 
